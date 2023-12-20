@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DataBase Edit</title>
+</head>
+<body>
+    <h2>Редактировать пользователя</h2>
+
+    <form method="POST">
+    {% csrf_token %}
+        <p>Email</p>
+        {{ form_edit.email }}
+        <p>Пароль</p>
+        {{ form_edit.password }}
+        <p>Логин</p>
+        {{ form_edit.login }}<br>
+        <input style="margin-top: 25px;" type="submit" value="Сохранить">
+        </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DataBase Add</title>
+</head>
+<body>
+    <h2>Добавить пользователя</h2>
+
+    <form method="POST">
+    {% csrf_token %}
+        <p>Email</p>
+        {{ form_add.email }}
+        <p>Пароль</p>
+        {{ form_add.password }}
+        <p>Логин</p>
+        {{ form_add.login }}<br>
+        <input style="margin-top: 25px;" type="submit" value="Создать">
+        </form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DataBase Edit</title>
+</head>
+<body>
+    {% for i in users %}
+        <hr>
+        <h2>Логин: {{ i.login }}</h2>
+        <p>Почта: {{ i.email }}</p>
+        <p>Пароль: {{ i.password }}</p>
+        <a href="{% url 'edit_choose' i.id %}">Редактировать</a>
+        <hr>
+    {% endfor %}
+</body>
+</html>
